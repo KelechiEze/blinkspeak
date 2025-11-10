@@ -1,6 +1,20 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Sparkles, Eye, Heart } from 'lucide-react';
+import { 
+  Sparkles, 
+  Eye, 
+  Heart, 
+  Smile, 
+  Frown, 
+  Hand, 
+  Settings, 
+  Check,
+  X,
+  ThumbsUp,
+  ThumbsDown,
+  Waves,
+  Users
+} from 'lucide-react';
 import gsap from 'gsap';
 import './Landing.css';
 
@@ -65,32 +79,119 @@ const Landing = () => {
           <Sparkles className="icon-sparkle" />
         </div>
 
-        <h1 className="hero-title">BlinkSpeak</h1>
+        <h1 className="hero-title">GesturePal</h1>
         
         <p className="hero-subtitle">
-          Communicate with Your Eyes
+          Your Voice Through Movement
         </p>
 
         <div className="features-grid">
-          <div className="hero-features feature-card">
+          {/* Blink Gesture */}
+          <div className="feature-card">
             <Eye className="feature-icon-svg" />
-            <h3>One Blink = YES</h3>
-            <p>Simple and natural</p>
-          </div>
-          
-          <div className="hero-features feature-card">
-            <div className="feature-icon-row">
-              <Eye className="feature-icon-svg" />
-              <Eye className="feature-icon-svg" />
+            <h3>Eye Blinking</h3>
+            <p>One blink for YES, two blinks for NO</p>
+            <div className="gesture-examples">
+              <div className="gesture-example">
+                <Eye size={16} />
+                <span>= Yes</span>
+              </div>
+              <div className="gesture-example">
+                <Eye size={16} />
+                <Eye size={16} />
+                <span>= No</span>
+              </div>
             </div>
-            <h3>Two Blinks = NO</h3>
-            <p>Easy to remember</p>
           </div>
           
-          <div className="hero-features feature-card">
+          {/* Smile Gesture */}
+          <div className="feature-card">
+            <Smile className="feature-icon-svg" />
+            <h3>Smile Detection</h3>
+            <p>Smile for YES, neutral for NO</p>
+            <div className="gesture-examples">
+              <div className="gesture-example">
+                <Check size={16} />
+                <span>= Yes</span>
+              </div>
+              <div className="gesture-example">
+                <X size={16} />
+                <span>= No</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Head Nod Gesture */}
+          <div className="feature-card">
+            <Frown className="feature-icon-svg" />
+            <h3>Head Nodding</h3>
+            <p>Nod once for YES, twice for NO</p>
+            <div className="gesture-examples">
+              <div className="gesture-example">
+                <ThumbsUp size={16} />
+                <span>= Yes</span>
+              </div>
+              <div className="gesture-example">
+                <ThumbsDown size={16} />
+                <span>= No</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Hand Wave Gesture */}
+          <div className="feature-card">
+            <Hand className="feature-icon-svg" />
+            <h3>Hand Waving</h3>
+            <p>Wave once for YES, twice for NO</p>
+            <div className="gesture-examples">
+              <div className="gesture-example">
+                <Waves size={16} />
+                <span>= Yes</span>
+              </div>
+              <div className="gesture-example">
+                <Waves size={16} />
+                <Waves size={16} />
+                <span>= No</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Multiple Options */}
+          <div className="feature-card">
+            <div className="feature-icon-row">
+              <Eye className="feature-icon-svg" size={32} />
+              <Smile className="feature-icon-svg" size={32} />
+              <Hand className="feature-icon-svg" size={32} />
+            </div>
+            <h3>Multiple Gestures</h3>
+            <p>Choose what works best for you</p>
+            <div className="gesture-examples">
+              <div className="gesture-example">
+                <Settings size={16} />
+                <span>Flexible</span>
+              </div>
+              <div className="gesture-example">
+                <Users size={16} />
+                <span>Adaptive</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Made with Love */}
+          <div className="feature-card">
             <Heart className="feature-icon-svg" />
             <h3>Made with Love</h3>
-            <p>For amazing kids</p>
+            <p>For amazing kids with CP</p>
+            <div className="gesture-examples">
+              <div className="gesture-example">
+                <Heart size={16} />
+                <span>Accessible</span>
+              </div>
+              <div className="gesture-example">
+                <Users size={16} />
+                <span>Inclusive</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -99,7 +200,7 @@ const Landing = () => {
           onClick={handleStart}
         >
           <Sparkles className="button-icon" />
-          Start Your Journey
+          Discover Your Voice
         </button>
       </div>
     </div>

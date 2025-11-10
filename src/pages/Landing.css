@@ -278,3 +278,159 @@
     height: 40px;
   }
 }
+/* Add these to your existing Landing.css */
+
+/* Gesture examples styling */
+.gesture-examples {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.gesture-example {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  padding: 0.25rem 0.5rem;
+  background: hsl(var(--muted) / 0.3);
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+}
+
+.gesture-example span {
+  font-weight: 500;
+}
+
+/* Enhanced feature grid for better layout */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  opacity: 1;
+}
+
+/* Improved feature card styling */
+.feature-card {
+  background: hsl(var(--card));
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-smooth);
+  border: 2px solid hsl(var(--border));
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+  border-color: hsl(var(--primary) / 0.3);
+}
+
+/* Feature icon enhancements */
+.feature-icon-svg {
+  width: 48px;
+  height: 48px;
+  color: hsl(var(--primary));
+  margin: 0 auto 1rem;
+  display: block;
+  transition: var(--transition-smooth);
+}
+
+.feature-card:hover .feature-icon-svg {
+  transform: scale(1.1);
+  color: hsl(var(--primary));
+}
+
+/* Multiple icons row */
+.feature-icon-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-icon-row .feature-icon-svg {
+  margin: 0;
+  width: 32px;
+  height: 32px;
+}
+
+/* Feature text styling */
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 800px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .feature-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .feature-icon-svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .feature-icon-row .feature-icon-svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.125rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.875rem;
+  }
+  
+  .gesture-examples {
+    gap: 0.5rem;
+  }
+  
+  .gesture-example {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .features-grid {
+    gap: 0.75rem;
+  }
+  
+  .feature-card {
+    padding: 1.25rem 0.75rem;
+  }
+  
+  .gesture-examples {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
