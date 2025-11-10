@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* BlinkSpeak Purple Theme - Soothing & Child-Friendly */
+    --background: 250 100% 98%;
+    --foreground: 260 40% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 40% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 40% 15%;
+
+    /* Primary Purple - Main Brand Color */
+    --primary: 265 80% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 265 70% 80%;
+    --primary-dark: 265 85% 45%;
+
+    /* Secondary Soft Purple */
+    --secondary: 270 60% 92%;
+    --secondary-foreground: 260 40% 20%;
+
+    /* Success Green for YES */
+    --success: 145 70% 55%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 145 60% 85%;
+
+    /* Error Red for NO */
+    --error: 355 75% 60%;
+    --error-foreground: 0 0% 100%;
+    --error-light: 355 65% 85%;
+
+    --muted: 270 30% 94%;
+    --muted-foreground: 260 15% 50%;
+
+    --accent: 280 70% 70%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 25% 88%;
+    --input: 270 25% 88%;
+    --ring: 265 80% 65%;
+
+    --radius: 1rem;
+
+    /* Custom Variables for BlinkSpeak */
+    --glow-purple: 265 80% 65% / 0.4;
+    --gradient-purple: linear-gradient(135deg, hsl(265 80% 75%), hsl(280 75% 65%));
+    --gradient-success: linear-gradient(135deg, hsl(145 70% 65%), hsl(160 65% 55%));
+    --gradient-error: linear-gradient(135deg, hsl(355 75% 70%), hsl(345 70% 60%));
+    
+    /* Animation Timings */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(265 80% 65% / 0.15);
+    --shadow-glow: 0 0 30px hsl(265 80% 65% / 0.3);
+    --shadow-strong: 0 10px 40px hsl(265 80% 65% / 0.25);
+  }
+
+  .dark {
+    --background: 260 40% 10%;
+    --foreground: 250 30% 95%;
+
+    --card: 260 35% 12%;
+    --card-foreground: 250 30% 95%;
+
+    --popover: 260 35% 12%;
+    --popover-foreground: 250 30% 95%;
+
+    --primary: 265 75% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 30% 18%;
+    --secondary-foreground: 250 30% 95%;
+
+    --muted: 270 25% 15%;
+    --muted-foreground: 260 15% 60%;
+
+    --accent: 280 65% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 25% 20%;
+    --input: 270 25% 20%;
+    --ring: 265 75% 60%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Ensure all text elements use Poppins */
+  h1, h2, h3, h4, h5, h6, p, span, div, button, input, textarea, select, label {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Optional: Define font weights for headings */
+  h1 {
+    font-weight: 700;
+  }
+
+  h2 {
+    font-weight: 600;
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+}
